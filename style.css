@@ -1,0 +1,265 @@
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: Microsoft JhengHei;
+}
+
+html, body{
+	height: 100%;
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+#video-bg {
+	position: relative;
+	width: auto;
+	height: auto;
+	background: transparent url(video-bg.jpg) no-repeat;
+	background-size: cover;
+  }
+  video {
+	display: block;
+  }
+  .video-container {
+	width: 100%;
+	max-height: 600px;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: -100;
+  }
+
+.content{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 3rem;
+	text-transform: uppercase;
+}
+
+.btn{
+	padding: 0.8rem 1.7rem;
+	background-color: #fff;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 4px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+.start{
+	color: white ;
+	background: none;
+	font-size: 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	border: 2px solid white !important;
+	transition: all 0.5s ease;
+	margin: 20% 0;
+}
+
+
+.start:hover {
+	background: white;
+	color: #c5a8a5;
+
+  }
+
+#continue, .stop, #start{
+	display: none;
+}
+
+.hello{
+	font-family: Microsoft JhengHei;
+	animation: mymove 3s;
+}
+
+@keyframes mymove
+{ 
+  from {transform: translateY(100px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+@keyframes fadeIn{
+	from { opacity: 0;}
+	to {opacity: 1;}
+}
+
+.start{
+	animation: fadeIn 8s;
+}
+
+#seconds{
+	animation: fadeIn 8s;
+}
+
+
+#seconds{
+	width: 250px;
+	background: none;
+	outline: none;
+	border: none;
+	border-bottom: 4px solid #fff;
+	padding: 1rem;
+	font-size: 2rem;
+	color: white;
+}
+
+
+#seconds::placeholder{
+	color: #ddd;
+	font-family: Microsoft JhengHei;
+}
+
+.track-outline{
+	height: 60vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 3rem;
+	text-transform: uppercase;
+}
+html{
+	scroll-behavior: smooth;
+}
+/* mediation */
+.app {
+	height: 100vh;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	font-family: "Montserrat", sans-serif;
+  }
+  
+  .time-select {
+	height: 80%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+	flex: 1;
+	margin-left: 10%;
+  }
+
+  .sound-picker{
+	height: 80%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+	flex: 1;
+	margin-right: 10%;
+  }
+  .time-select button{
+	outline: none;
+	position: relative;
+	color: white;
+	width: 40%;
+	height: 10%;
+	background: none;
+	font-size: 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	border: 2px solid white;
+	transition: all 0.5s ease;
+  }
+
+  #replay{
+	  height: 6%;
+	  margin: 10px;
+  }
+
+  .sound-picker button {
+	outline: none;
+	/* 去除邊框 */
+	border: none;
+	height: 120px;
+	width: 120px;
+	padding: 30px;
+	border-radius: 50%;
+	cursor: pointer;
+	margin: 8% 0 0;
+	opacity: 1;
+    transition-delay: 0.2s;
+  }
+  .sound-picker button:nth-child(1) {
+	background: #9ca8b8;
+  }
+  .sound-picker button:nth-child(2) {
+	background: #e0cdcf;
+  }
+  .sound-picker button img {
+	height: 100%;
+  }
+
+  .sound-picker button:hover {
+	transform: scale(1.1);
+	transition: all 0.5s ease-in-out 0s;
+}
+
+
+
+  .time-select button:hover {
+	background: white;
+	color: #d8caaf;
+  }
+  
+  .emptybox{
+	  height: 100%;
+  }
+
+
+  .player-container {
+    position: relative;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 15%;
+}
+  
+  .player-container svg {
+	position: absolute;
+	height: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(-90deg);
+	pointer-events: none;
+  }
+  .player-container svg circle {
+	transition: all 0.2s ease-in-out;
+  }
+  .time-display {
+	color: white;
+	position: absolute;
+	font-size: 40px;
+	bottom: 12%;
+  }
+  
+  video {
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	z-index: -10;
+  }
+  
